@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shapes</title>
+  <style>
+    .box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+
+    .svg {
+      width: 400px;
+      height: 300px;
+      border: 1px solid #000;
+      margin: 50px;
+    }
+
+    .rect {
+      stroke-dasharray: 700;
+      stroke-dashoffset: 700;
+      transition: all 1s ease-in-out;
+    }
+
+    .svg-rect:hover .rect {
+      stroke-dashoffset: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <svg class="svg svg-rect">
+      <rect class="rect" width="200" height="150" fill="none" stroke="#123456" stroke-width="10" x="100" y="75" rx="10"
+        ry="20" />
+    </svg>
+    <svg class="svg">
+      <circle r="100" fill="firebrick" cx="50%" cy="50%" stroke="orange" stroke-width="100" stroke-dasharray="20" />
+    </svg>
+    <svg class="svg">
+      <ellipse rx="100" ry="50" fill="gold" cx="50%" cy="50%" />
+    </svg>
+    <svg class="svg">
+      <polygon points="100,50 300,50 200,250" fill="none" stroke="silver" stroke-width="10" stroke-dasharray="30"
+        stroke-dashoffset="11" />
+    </svg>
+    <svg class="svg">
+      <line x1="50" y1="50" x2="350" y2="250" stroke="brown" stroke-width="20" stroke-linecap="round" />
+    </svg>
+    <svg class="svg">
+      <polyline points="50,50 100,100 50,120 200,200 300,50" fill="none" stroke="orange" stroke-width="20"
+        stroke-linejoin="round" />
+    </svg>
+
+  </div>
+</body>
+
+</html>
